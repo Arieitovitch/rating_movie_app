@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="nav_bar">
+    <ul>
+       <li class="active"><a href="">Home</a></li>
+       <li class="ratings"><a href="ratings">Ratings</a></li>
+       <form method="post">
+        {% csrf_token %}
+        <button value="logout" name="logout">Log out</button>
+        </form>
+    </ul>
+</div>
+
+<!-- rating -->
+<div class="ratings">
+    <form method="post">
+        {% csrf_token %}
+        <button value="dislike" name="dislike">dislike</button>
+        <button value="like" name="like">like</button>
+        <button value="" name="">haven't seen</button>
+        <input type="hidden" value="{{ film.title }}" name="new">
+        </form>
+</div>
+
+<!-- movie info -->
+<div class="movie_info">
+    <img src="{{ film.image }}">
+    <h3 class="title">{{ film.title }}</h3>
+    <h2 class="actors">{{ film.actors }}</h2>
+    <h2 class="director">{{ film.director }}</h2>
+    <h3 class="genre">{{ film.genre }}</h3>
+</div>
+
+</body>
+</html>
