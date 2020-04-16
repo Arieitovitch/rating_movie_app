@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- whats up -->
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -14,8 +13,8 @@
         <h1>ButteryCorn</h1>
         <form method="post" class="form">
             {% csrf_token %}
-    <div class="txtb"><input type="text" placeholder="Your Username" name="username" required></div>
-    <div class="txtb"><input type="password" placeholder="Your password" name="password" required></div>
+    <div class="txtb"><input type="text" placeholder="Username" name="username" required></div>
+    <div class="txtb"><input type="password" placeholder="Password" name="password" required></div>
     <button type="submit" class="login-btn"> Log In</button>
     <h4>OR</h4>
     <button type="submit" class="facebook-btn"><img src="{%static 'rate/facebook.png'%}" class="fb-logo">   Log in with Facebook</button>
