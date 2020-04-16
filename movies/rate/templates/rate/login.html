@@ -10,14 +10,17 @@
 </head>
 <body>
     <div class="login">
+        <h1>ButteryCorn</h1>
         <form method="post" class="form">
             {% csrf_token %}
-        <input type="text" placeholder="Your Username" name="username" required>
-        <input type="password" placeholder="Your password" name="password" required>
-        <button type="submit" class="login-btn"> Log In</button>
+    <div class="txtb"><input type="text" placeholder="Your Username" name="username" required></div>
+    <div class="txtb"><input type="password" placeholder="Your password" name="password" required></div>
+    <button type="submit" class="login-btn"> Log In</button>
+    <h4>OR</h4>
+    <button type="submit" class="facebook-btn"><img src="{%static 'rate/facebook.png'%}" class="fb-logo">   Log in with Facebook</button>
         </form>
-    </div>
-
+   
+   
 
     <div class="signup">
         <p>Don't have an account? <a href="signup">Sign up</a></p>
