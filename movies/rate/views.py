@@ -15,7 +15,6 @@ def signin(request):
      if request.user.is_authenticated:
           return redirect('home')
      if request.method == 'POST':
-          print (request)
           username = request.POST['username']
           password = request.POST['password']
           username_lower = username.lower()

@@ -1,2 +1,2 @@
-__pycache__
-db.sqllite3
+*.sqlite3
+__pycache__/
