@@ -12,7 +12,7 @@
 
     <ul>
         {% for Movie in Movie %}
-        <li>{{Movie.title}} <img src="{{ Movie.image }}"></li>
+        <li> {{ forloop.counter }} {{Movie.title}} <img src="{{ Movie.image }}"></li>
         {% endfor %}
     </ul>
 </body>

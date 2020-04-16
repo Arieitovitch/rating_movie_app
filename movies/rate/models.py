@@ -15,3 +15,4 @@ class Movie(models.Model):
     like = models.IntegerField(default=0)
     dislike = models.IntegerField(default=0)
     score = models.CharField(max_length=100000, blank=True)
+    rating = models.IntegerField(default=0)

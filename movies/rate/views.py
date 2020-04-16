@@ -129,9 +129,9 @@ def rate_movies():
 
 def ratings(request):
      movie_object = Movie.objects.all()
-
      rate_movies()
-     ratings = reversed(Movie.objects.order_by('score'))
+     ratings = Movie.objects.order_by('-score')
+
      context = {
           'Movie':ratings,
      }
