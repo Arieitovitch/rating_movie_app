@@ -21,11 +21,7 @@
         <div class="txtb"><input type="password" placeholder="Your password" name="password" required></div>
         <div class="txtb"><input type="password" placeholder="Confirm password" name="confirm_password" required></div>
         <button type="submit" class="login-btn">Sign Up</button>
-<<<<<<< HEAD
-        <button type="submit" class="facebook-btn"><img src="{%static 'rate/facebook.png'%}" class="fb-logo">   Sign Up with Facebook</button>
-=======
         <button type="submit" class="facebook-btn"><img src="{%static 'rate/facebook.png'%}" class="fb-logo"><a href="{% provider_login_url "facebook" method="oauth2" %}"> Log in with Facebook </a></button>
->>>>>>> c0a413237606bcfb6c0cd1c84f433ea947b9b96b
         </form>
     
 
@@ -35,7 +31,7 @@
     </div>
 </div>
     <div class="signup">
-        <p>Have an account? <a href="signin">Log In</a></p>
+        <p>Have an account? <a href="signin" class="lbtn">Log In</a></p>
     </div>
 
    

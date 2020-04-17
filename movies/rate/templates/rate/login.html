@@ -4,20 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{% static 'rate/login.css' %}">
-    <title>Document</title>
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{% static '/rate/login.css' %}">
     <title>ButteryCorn - Log in</title>
->>>>>>> c0a413237606bcfb6c0cd1c84f433ea947b9b96b
 </head>
 <body>
     
@@ -29,13 +20,9 @@
     <div class="txtb"><input type="password" placeholder="Password" name="password" required></div>
     <button type="submit" class="login-btn"> Log In</button>
     <h4>OR</h4>
-<<<<<<< HEAD
-    <button type="submit" class="facebook-btn"><img src="{%static 'rate/facebook.png'%}" class="fb-logo">   Log in with Facebook</button>
-=======
     <button type="submit" class="facebook-btn"><img src="{%static 'rate/facebook.png'%}" class="fb-logo"><a href="{% provider_login_url "facebook" method="oauth2" %}"> Log in with Facebook </a></button>
         
 
->>>>>>> c0a413237606bcfb6c0cd1c84f433ea947b9b96b
         </form>
    
         <div class="message">
@@ -43,7 +30,7 @@
         </div>
 
     <div class="signup">
-        <p>Don't have an account? <a href="signup">Sign up</a></p>
+        <p>Don't have an account? <a href="signup" class="lbtn">Sign up</a></p>
     </div>
 
 </body>

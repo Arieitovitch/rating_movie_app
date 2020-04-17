@@ -39,7 +39,12 @@ a{
 	border-bottom: 2px solid #666666;
 	position: relative;
 	margin:30px 0;
+	transition: 0.5s;
 
+}
+
+.txtb:hover {
+	opacity: 0.5;
 }
 
 .txtb input{
@@ -73,7 +78,7 @@ a{
 }
 
 .login-btn:hover{
-	background-color:#ffc500;
+	opacity: 0.8;
 }
 
 .signup{
@@ -104,9 +109,21 @@ a{
     font-weight: bolder;
 }
 
+.facebook-btn:hover {
+	opacity: 0.6;
+}
+
 .message{
 	text-align: center;
 	padding-top: 45px;
 	color: red;
 	font-size: 13px;
+}
+
+.lbtn {
+	transition: 0.5s;
+}
+
+.lbtn:hover{
+	opacity: 0.6;
 }
