@@ -24,7 +24,7 @@ def signin(request):
                login(request, user)
                return redirect('home')
           else:
-               message = 'Sorry, the username or password you entered is invalid'
+               message = 'Sorry, the username or password you have entered is invalid.'
                context = {
                     'message':message,
                }

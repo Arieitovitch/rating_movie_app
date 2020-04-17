@@ -103,3 +103,10 @@ a{
 	font-family: sans-serif;
     font-weight: bolder;
 }
+
+.message{
+	text-align: center;
+	padding-top: 45px;
+	color: red;
+	font-size: 13px;
+}
