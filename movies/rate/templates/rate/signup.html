@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="login">
+    <div class=txtb>   
         <form method="post" class="form">
             {% csrf_token %}
         <input type="text" placeholder="Your Username" name="username" required>
@@ -29,6 +30,6 @@
     <div class="message">
         <h3>{{message}}</h3>
     </div>
-    
+    </div>
 </body>
 </html>
