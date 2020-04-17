@@ -38,30 +38,38 @@ def signup(request):
      if request.method == 'POST':
           username = request.POST['username']
           password = request.POST['password']
+          confirm_password = request.POST['confirm_password']
           password_lower = password.lower()
           email = request.POST['Email']
           email_lower = email.lower()
           username_lower = username.lower()
+          
+          if confirm_password == password:
 
-          if not User.objects.filter(username=username_lower).exists(): 
-               if not User.objects.filter(email=email_lower).exists():
-                    User.objects.create_user(username=username_lower, password=password_lower, email=email_lower)
-                    user = authenticate(username=username_lower, password=password_lower, email=email_lower)
-                    login(request, user)
-                    return redirect('home')
+               if not User.objects.filter(username=username_lower).exists(): 
+                    if not User.objects.filter(email=email_lower).exists():
+                         User.objects.create_user(username=username_lower, password=password_lower, email=email_lower)
+                         user = authenticate(username=username_lower, password=password_lower, email=email_lower)
+                         login(request, user)
+                         return redirect('home')
+                    else: 
+                         message = 'Sorry, That Email is taken'
+                         context = {
+                              'message':message,
+                         }
+                         return render(request, 'rate/signup.html', context)
+
                else: 
-                    message = 'Sorry, That Email is taken'
+                    message = 'Sorry, That username is taken'
                     context = {
                          'message':message,
                     }
-               return render(request, 'rate/signup.html', context)
-
+                    return render(request, 'rate/signup.html', context)
           else: 
-               message = 'Sorry, That username is taken'
+               message = 'The passwords you have entered do not match'
                context = {
                     'message':message,
                }
-
                return render(request, 'rate/signup.html', context)
      else:
           return render(request, 'rate/signup.html',)
