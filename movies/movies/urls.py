@@ -21,5 +21,6 @@ from movies import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rate/', include('rate.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('rate/', include('rate.urls')),
+    path('accoounts', include('allauth.urls'))
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
